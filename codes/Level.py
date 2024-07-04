@@ -13,11 +13,12 @@ class Level:
         self.name = name
         self.mode = menu_option  # option that you choose play mode
         self.entity_list: list[Entity] = []
-        self.entity_list.append(EntityFactory.get_entity("imagebackground1", (0, 0)))
+        self.entity_list.extend(EntityFactory.get_entity("imagebackground"))
 
-    def run(self, ):
+    def run(self):
         while True:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surfaces, dest=ent.rect)
+                ent.move()
             pygame.display.flip()
         pass
