@@ -1,12 +1,13 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Entity import Entity
+from codes.Entity import Entity
 
-class background(Entity):
-    def __init__(self):
+
+class Background(Entity):
+    def __init__(self, name: str, position: tuple):
+        super().__init__(name, position)
         pass
 
-    def move(self, ):
+    def move(self):
         pass
-
