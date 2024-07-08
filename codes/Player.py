@@ -1,12 +1,11 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+from codes.Entity import Entity
 
-from Entity import Entity
 
 class Player(Entity):
-    def __init__(self):
-        self.Attribute1 = None
+    def __init__(self, name: str, position: tuple):
+        super().__init__(name, position)
 
-    def move(self, ):
+    def move(self):
         pass
-
