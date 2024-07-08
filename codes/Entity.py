@@ -8,7 +8,7 @@ import pygame.image
 class Entity(ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name
-        self.surfaces = pygame.image.load("C:\pythonprojeto02\essets\image_background_level_one/" + name + ".png")
+        self.surfaces = pygame.image.load("C:\pythonprojeto02\essets\image_background_level_one/" + name + ".png").convert_alpha()
         self.rect = self.surfaces.get_rect(left=position[0], top=position[1])
         self.speed = 0
 

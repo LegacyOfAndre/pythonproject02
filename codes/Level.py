@@ -16,7 +16,11 @@ class Level:
         self.entity_list.extend(EntityFactory.get_entity("imagebackground"))
 
     def run(self):
+        clock = pygame.time.Clock()
+        pygame.mixer_music.load("C:\pythonprojeto02\essets\image_background_level_one\level_one_background.wav")
+        pygame.mixer_music.play(-1)
         while True:
+            clock.tick(60)
             for ent in self.entity_list:
                 self.window.blit(source=ent.surfaces, dest=ent.rect)
                 ent.move()
