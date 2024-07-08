@@ -12,11 +12,11 @@ from codes.Constantes import WINDOWS_WIDTH, COLOR_BLACK, MENU_OPTION, COLOR_WHIT
 class Menu:
     def __init__(self, window):
         self.window: Surface = window
-        self.surf = pygame.image.load('C:\pythonprojeto02\essets\menu\menu_background\menu_background.png').convert_alpha()
+        self.surf = pygame.image.load("../assets/menu/menu_background/menu_background.png").convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self):
-        pygame.mixer_music.load("C:\pythonprojeto02\essets\menu\menu_background\menu_background.wav")
+        pygame.mixer_music.load("../assets/menu/menu_background/menu_background.wav")
         pygame.mixer_music.play(-1)
         menu_option = 0
         while True:

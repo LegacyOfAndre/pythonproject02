@@ -17,7 +17,7 @@ class Level:
 
     def run(self):
         clock = pygame.time.Clock()
-        pygame.mixer_music.load("C:\pythonprojeto02\essets\image_background_level_one\level_one_background.wav")
+        pygame.mixer_music.load("../assets/assets_background_level_one/level_one_background.wav")
         pygame.mixer_music.play(-1)
         while True:
             clock.tick(60)
