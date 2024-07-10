@@ -24,6 +24,8 @@ ENTITY_SPEED = {"imagebackground0": 0,
                 "imagebackground7": 7,
                 "Player1": 2.5,
                 "Player2": 3,
+                "Enemy1": 2.5,
+                "Enemy2": 2.0,
                 }
 
 #PLAYER_KEYBOARD_MOVEMENT
@@ -38,3 +40,6 @@ PLAYER_KEY_RIGHT = {"Player1": pygame.K_RIGHT,
 
 PLAYER_KEY_LEFT = {"Player1": pygame.K_LEFT,
                    "Player2": pygame.K_a}
+
+#EVENT ENEMY
+EVENT_ENEMY = pygame.USEREVENT + 1
