@@ -1,4 +1,6 @@
 # COLOR
+import pygame
+
 COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 
@@ -20,5 +22,19 @@ ENTITY_SPEED = {"imagebackground0": 0,
                 "imagebackground5": 5,
                 "imagebackground6": 6,
                 "imagebackground7": 7,
-                "Player1": 3,
+                "Player1": 2.5,
+                "Player2": 3,
                 }
+
+#PLAYER_KEYBOARD_MOVEMENT
+PLAYER_KEY_UP = {"Player1": pygame.K_UP,
+                 "Player2": pygame.K_w}
+
+PLAYER_KEY_DOWN = {"Player1": pygame.K_DOWN,
+                   "Player2": pygame.K_s}
+
+PLAYER_KEY_RIGHT = {"Player1": pygame.K_RIGHT,
+                    "Player2": pygame.K_d}
+
+PLAYER_KEY_LEFT = {"Player1": pygame.K_LEFT,
+                   "Player2": pygame.K_a}
