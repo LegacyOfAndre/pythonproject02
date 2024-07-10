@@ -19,5 +19,6 @@ ENTITY_SPEED = {"imagebackground0": 0,
                 "imagebackground4": 4,
                 "imagebackground5": 5,
                 "imagebackground6": 6,
-                "imagebackground7": 7
+                "imagebackground7": 7,
+                "Player1": 3,
                 }

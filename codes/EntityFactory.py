@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from codes.Constantes import WINDOWS_WIDTH
+from codes.Constantes import WINDOWS_WIDTH, WINDOWS_HEIGHT
+from codes.Player import Player
 from codes.background import Background
 
 
@@ -15,3 +16,5 @@ class EntityFactory:
                     list_bg.append(Background(f"imagebackground{i}", (0, 0)))
                     list_bg.append(Background(f"imagebackground{i}", (WINDOWS_WIDTH, 0)))
                 return list_bg
+            case "Player1":
+                return Player("Player1", (10, (WINDOWS_HEIGHT / 2)))
