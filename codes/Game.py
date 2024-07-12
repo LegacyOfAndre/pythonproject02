@@ -1,10 +1,8 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 
 import pygame
-from pygame import Surface, Rect
-from pygame.font import Font
 
 from codes.Constantes import WINDOWS_WIDTH, WINDOWS_HEIGHT, MENU_OPTION
 from codes.Level import Level

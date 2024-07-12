@@ -28,13 +28,22 @@ class Level:
         clock = pygame.time.Clock()
         pygame.mixer_music.load("../assets/assets_background_level_one/level_one_background.wav")
         pygame.mixer_music.play(-1)
+
         while True:
-            clock.tick(60)
+            clock.tick(60)  # tick to select the fps
+
+            # for to draw all entities
             for ent in self.entity_list:
                 self.window.blit(source=ent.surfaces, dest=ent.rect) #here is drawing all entities
-                self.level_text(14, f"Fps: {clock.get_fps():.0f}", COLOR_WHITE, (10, 10))
                 ent.move()
 
+            # printing the fps text in the window
+            self.level_text(14, f"Fps: {clock.get_fps():.0f}", COLOR_WHITE, (10, 10))
+
+            # reload window
+            pygame.display.flip()
+
+            # check events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -42,9 +51,9 @@ class Level:
                 if event.type == EVENT_ENEMY:
                     choice = random.choice(("Enemy1", "Enemy2"))
                     self.entity_list.append(EntityFactory.get_entity(choice))
-            pygame.display.flip()
         pass
 
+    # method that define the font of text level
     def level_text(self, text_size: int, text: str, text_color: tuple, text_position: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()

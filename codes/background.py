@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from codes.Constantes import WINDOWS_WIDTH, ENTITY_SPEED
 from codes.Entity import Entity
 

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import pygame.key
 
 from codes.Constantes import ENTITY_SPEED, WINDOWS_HEIGHT, WINDOWS_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, \

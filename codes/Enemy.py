@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from codes.Constantes import ENTITY_SPEED, WINDOWS_WIDTH
 from codes.Entity import Entity
 
@@ -12,4 +12,3 @@ class Enemy(Entity):
         self.rect.centerx -= ENTITY_SPEED[self.name]
         if self.rect.right <= 0:
             self.rect.left = WINDOWS_WIDTH
-
