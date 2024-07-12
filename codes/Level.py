@@ -39,6 +39,7 @@ class Level:
 
             # printing the fps text in the window
             self.level_text(14, f"Fps: {clock.get_fps():.0f}", COLOR_WHITE, (10, 10))
+            self.level_text(14, f"Entities: {len(self.entity_list)}", COLOR_WHITE, (10, 25))
 
             # reload window
             pygame.display.flip()
