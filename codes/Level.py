@@ -10,6 +10,7 @@ from pygame.font import Font
 from codes.Constantes import COLOR_WHITE, MENU_OPTION, EVENT_ENEMY
 from codes.Entity import Entity
 from codes.EntityFactory import EntityFactory
+from codes.EntityMediator import EntityMediator
 
 
 class Level:
@@ -34,7 +35,7 @@ class Level:
 
             # for to draw all entities
             for ent in self.entity_list:
-                self.window.blit(source=ent.surfaces, dest=ent.rect) #here is drawing all entities
+                self.window.blit(source=ent.surfaces, dest=ent.rect)  # here is drawing all entities
                 ent.move()
 
             # printing the fps text in the window
@@ -43,6 +44,10 @@ class Level:
 
             # reload window
             pygame.display.flip()
+
+            # verify relationships of entities
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
 
             # check events
             for event in pygame.event.get():
@@ -54,7 +59,7 @@ class Level:
                     self.entity_list.append(EntityFactory.get_entity(choice))
         pass
 
-    # method that define the font of text level
+    # method that define the text level font
     def level_text(self, text_size: int, text: str, text_color: tuple, text_position: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()

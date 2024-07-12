@@ -4,11 +4,12 @@ import pygame
 COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 
-# MENUTEXT
+# MENU TEXT
 MENU_OPTION = ("New Game 1 Player",
                "New Game 2 Players - Cooperative",
                "New Game 2 Players - Competitive",
                "Exit")
+
 # WINDOW
 WINDOWS_WIDTH = 576
 WINDOWS_HEIGHT = 324
@@ -27,6 +28,20 @@ ENTITY_SPEED = {"imagebackground0": 0,
                 "Enemy1": 2.5,
                 "Enemy2": 2.0,
                 }
+
+ENTITY_HEALTH = {"imagebackground0": 999,
+                 "imagebackground1": 999,
+                 "imagebackground2": 999,
+                 "imagebackground3": 999,
+                 "imagebackground4": 999,
+                 "imagebackground5": 999,
+                 "imagebackground6": 999,
+                 "imagebackground7": 999,
+                 "Player1": 300,
+                 "Player2": 300,
+                 "Enemy1": 100,
+                 "Enemy2": 100,
+                 }
 
 #PLAYER_KEYBOARD_MOVEMENT
 PLAYER_KEY_UP = {"Player1": pygame.K_UP,
