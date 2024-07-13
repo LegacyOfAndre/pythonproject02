@@ -24,11 +24,13 @@ ENTITY_SPEED = {"imagebackground0": 0,
                 "imagebackground6": 6,
                 "imagebackground7": 7,
                 "Player1": 2.5,
-                "Player2": 3,
-                "Enemy1": 2.5,
-                "Enemy2": 2.0,
                 "Player1Shot": 2,
-                "Player2Shot": 3
+                "Player2": 3,
+                "Player2Shot": 3,
+                "Enemy1": 1,
+                "Enemy1Shot": 2.5,
+                "Enemy2": 1,
+                "Enemy2Shot": 2,
                 }
 
 ENTITY_HEALTH = {"imagebackground0": 999,
@@ -44,13 +46,16 @@ ENTITY_HEALTH = {"imagebackground0": 999,
                  "Player2": 300,
                  "Player2Shot": 1,
                  "Enemy1": 100,
+                 "Enemy1Shot": 1,
                  "Enemy2": 100,
+                 "Enemy2Shot": 1,
                  }
-
 
 # Creation time gap shot when the shooting button is pressed
 ENTITY_SHOT_DELAY = {"Player1": 20,
-                     "Player2": 20
+                     "Player2": 20,
+                     "Enemy1": 50,
+                     "Enemy2": 50,
                      }
 
 # PLAYER_KEYBOARD_MOVEMENT
