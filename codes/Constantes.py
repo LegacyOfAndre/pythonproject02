@@ -40,12 +40,20 @@ ENTITY_HEALTH = {"imagebackground0": 999,
                  "imagebackground6": 999,
                  "imagebackground7": 999,
                  "Player1": 300,
+                 "Player1Shot": 1,
                  "Player2": 300,
+                 "Player2Shot": 1,
                  "Enemy1": 100,
                  "Enemy2": 100,
                  }
 
-#PLAYER_KEYBOARD_MOVEMENT
+
+# Creation time gap shot when the shooting button is pressed
+ENTITY_SHOT_DELAY = {"Player1": 20,
+                     "Player2": 20
+                     }
+
+# PLAYER_KEYBOARD_MOVEMENT
 PLAYER_KEY_UP = {"Player1": pygame.K_UP,
                  "Player2": pygame.K_w}
 
@@ -58,9 +66,8 @@ PLAYER_KEY_RIGHT = {"Player1": pygame.K_RIGHT,
 PLAYER_KEY_LEFT = {"Player1": pygame.K_LEFT,
                    "Player2": pygame.K_a}
 
-PLAYER_KEY_SHOOT = {"Player1": pygame.K_LCTRL,
-                    "Player2": pygame.K_RCTRL}
-
+PLAYER_KEY_SHOOT = {"Player1": pygame.K_RCTRL,
+                    "Player2": pygame.K_LCTRL}
 
 #EVENT ENEMY
 EVENT_ENEMY = pygame.USEREVENT + 1

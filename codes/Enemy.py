@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from codes.Constantes import ENTITY_SPEED, WINDOWS_WIDTH
+from codes.EnemyShot import EnemyShot
 from codes.Entity import Entity
 
 
@@ -10,3 +11,6 @@ class Enemy(Entity):
 
     def move(self):
         self.rect.centerx -= ENTITY_SPEED[self.name]
+
+    def shoot(self):
+        return EnemyShot(name=f"{self.name}Shot", position=(self.rect.centerx, self.rect.centery))

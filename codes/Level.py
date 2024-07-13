@@ -40,7 +40,9 @@ class Level:
                 self.window.blit(source=ent.surfaces, dest=ent.rect)  # here is drawing all entities
                 ent.move()
                 if isinstance(ent, (Player, Enemy)):
-                    self.entity_list.append(ent.shoot())
+                    shoot = ent.shoot()
+                    if shoot is not None:
+                        self.entity_list.append(ent.shoot())
 
             # printing the fps text in the window
             self.level_text(14, f"Fps: {clock.get_fps():.0f}", COLOR_WHITE, (10, 10))
