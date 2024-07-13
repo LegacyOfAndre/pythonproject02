@@ -8,9 +8,11 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from codes.Constantes import COLOR_WHITE, MENU_OPTION, EVENT_ENEMY
+from codes.Enemy import Enemy
 from codes.Entity import Entity
 from codes.EntityFactory import EntityFactory
 from codes.EntityMediator import EntityMediator
+from codes.Player import Player
 
 
 class Level:
@@ -37,6 +39,8 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surfaces, dest=ent.rect)  # here is drawing all entities
                 ent.move()
+                if isinstance(ent, (Player, Enemy)):
+                    self.entity_list.append(ent.shoot())
 
             # printing the fps text in the window
             self.level_text(14, f"Fps: {clock.get_fps():.0f}", COLOR_WHITE, (10, 10))
